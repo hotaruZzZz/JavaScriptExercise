@@ -1,5 +1,5 @@
 let person = {
-    name : "Leo",
+    name : "6",
     age : 1,
     height : 80,
     weight : 30
@@ -18,6 +18,7 @@ console.log(keys, values);
 keys.forEach((key) => {
     console.log(key, person[key]);
 });
+
 
 console.log(person);
 console.log("The object is " + person);
