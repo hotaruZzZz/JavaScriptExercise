@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let person = {
+    "firstname":"Ritsu",
+    "gender":true,
+    "height":170,
+    "email":"ritsu@gmail.com",
+    "city":{
+        "通訊地址":"新竹",
+        "戶籍地址":"高雄"
+    },
+    "phone":{
+        "市話":"02-29881055",
+        "行動電話":"0933-852177"
+    },
+    "cars":["BMW","Nissan","GT-R","Audi"]
+};
+window.onload = function(){
+    document.write(`<h2>${person.firstname}, ${person.city.通訊地址}, ${person.phone.行動電話}</h2>`);
+    document.write(`<h2>${person["firstname"]}, ${person["city"]["通訊地址"]}, ${person["phone"]["行動電話"]}</h2>`);
+    document.write(`<h2>${person["firstname"]}, ${person["city"].通訊地址}, ${person["phone"].行動電話}</h2>`);
+    
+    let key = Object.keys(person);
+
+    key.forEach(key => {
+        document.write(`<p>${key}</p>`);
+    });
+}
+console.log( person.firstname + ", 通訊地址: " + person.city.通訊地址 + ", 行動電話: " + person.phone.行動電話);
+    </script>
+</body>
+</html>

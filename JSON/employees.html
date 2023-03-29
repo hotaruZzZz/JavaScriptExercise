@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let corpData = {
+    "corp" : "NCU",
+    "version" : "1.0.1",
+    "publish" : "2023/3/22",
+    "employees" : [
+        {
+            "firstname":"Ritsu",
+            "gender":true,
+            "height":170,
+            "email":"ritsu@gmail.com",
+            "city":{
+                "通訊地址":"新竹",
+                "戶籍地址":"桃園"
+            },
+            "phone":{
+                "市話":"02-29881055",
+                "行動電話":"0933-852177"
+            },
+            "cars":["BMW","Nissan","GT-R","Audi"]
+        },
+        {
+            "firstname":"Mao",
+            "gender":true,
+            "height":169,
+            "email":"mao@gmail.com",
+            "city":{
+                "通訊地址":"台北",
+                "戶籍地址":"台中"
+            },
+            "phone":{
+                "市話":"03-123456",
+                "行動電話":"0987-948797"
+            },
+            "cars":["BMW","Nissan","GT-R","Audi"]
+        },
+        {
+            "firstname":"ruru",
+            "gender":false,
+            "height":60,
+            "email":"ruru@gmail.com",
+            "city":{
+                "通訊地址":"高雄",
+                "戶籍地址":"高雄"
+            },
+            "phone":{
+                "市話":"07-29881055",
+                "行動電話":"0909-090900"
+            },
+            "cars":["BMW","Nissan","GT-R","Audi"]
+        }
+    ]
+};
+window.onload = function(){
+    let employee = corpData.employees; 
+    employee.forEach(emp => {
+        document.write(`<h3>Firstname: ${emp.firstname}, 通訊地址: ${emp.city.通訊地址}, 行動電話: ${emp.phone.行動電話}</h3>`);
+    console.log(emp.firstname, emp.city.通訊地址, emp.phone.行動電話);
+});
+}
+
+    </script>
+</body>
+</html>

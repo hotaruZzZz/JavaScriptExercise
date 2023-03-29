@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Lativ 網站資料抓取</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Lativ 網站資料抓取</h1>
+  <button id="fetch-data">抓取資料</button>
+  <div id="data-container"></div>
+  
+  <script>
+    $('#fetch-data').click(function() {
+      $.ajax({
+        url: 'https://www.lativ.com.tw/WOMEN',
+        method: 'GET',
+        success: function(response) {
+          // 將網頁內容儲存到 data 變數中
+          var data = response;
+          // 顯示資料在網頁上
+          $('#data-container').html('<pre>' + data + '</pre>');
+        },
+        error: function() {
+          alert('資料抓取失敗');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

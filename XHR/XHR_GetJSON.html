@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>用XMLHttpRequest請求GitHub JSON資料</h1>
+
+    <button id='button1'>Request JSON1</button>
+    <button id='button2'>Request JSON2</button>
+    <button id='button3'>Request JSON3</button>
+    <button id='button4'>Request JSON4</button>
+    <button id='button5'>Request Apple JSON</button>
+    <button id='btnClear'>Clear</button>
+    <div id='msg'></div>
+    <ul id="container"></ul>
+
+    <script>
+        let btn1, btn2, btn3, btn4, btnClear;
+    </script>
+
+    <script type="module">
+
+        import { $g } from "../Modules/helpers.js";
+
+        let msg = $g('#msg');
+        let ul = $g("#container");
+        $g('button').forEach((item) => {
+            item.addEventListener('click', () => { msg.innerText = ''; })
+        });
+
+        
+        window.onload = function(){
+            btn1 = $g('#button1');
+            btn1.addEventListener('click', requestJSON1);
+            btn2 = $g('#button2');
+            btn2.addEventListener('click', requestJSON2);
+            btn3 = $g('#button3');
+            btn3.addEventListener('click', requestJSON3);
+            btn4 = $g('#button4');
+            btn4.addEventListener('click', requestJSON4);
+            btn4 = $g('#button5');
+            btn4.addEventListener('click', requestAppleJson.bind(null,urlApple));
+            btnClear = $g('#btnClear');
+            btnClear.addEventListener('click', () => { msg.innerText = ''; })
+        }
+
+
+        const url = 'https://raw.githubusercontent.com/apprunner/FileStorage/master/iPad_DataFixed.json';
+
+        const urlApple = "https://raw.githubusercontent.com/apprunner/FileStorage/master/apple_array.json";
+
+        function requestJSON1(){
+            
+        }
+
+        function requestJSON2(){
+
+        }
+
+        function requestJSON3(){
+
+        }
+
+        function requestJSON4(){
+
+        }
+        
+        function requestJSON5(){
+
+        }
+        z
+
+    </script>
+</body>
+
+</html>

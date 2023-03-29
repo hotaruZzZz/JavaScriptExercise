@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>寶可夢圖鑑列表</h1>
+    <button onclick='AddElement()'>加入寶可夢圖片元素</button>
+    <div id='container'></div>
+    <div id='container2'></div>
+    <script>
+        let n = 1;
+        function AddElement() {
+            //1.創建與設定HTML元素
+            let img = document.createElement('img');
+            img.setAttribute('src', 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png');
+            
+            
+
+            //2.選取HTML元素
+            let container = document.getElementById("container");
+            let container2 = document.getElementById("container2");
+            let div = document.querySelector("body div");
+
+
+            // let fileName = n.toString().padStart(3, '0');
+            // let filePath = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
+            // img.setAttribute('src', filePath);
+            // n++;
+            
+            //3.加入元素旗下
+            container.appendChild(img);
+            container.appendChild(img.cloneNode());
+            
+            
+
+
+        }
+    </script>
+</body>
+
+</html>
